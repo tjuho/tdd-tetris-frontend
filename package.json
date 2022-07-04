@@ -2,6 +2,13 @@
   "name": "tetris",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Juho Taipale"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tjuho/tdd-tetris-frontend.git"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
