@@ -15,9 +15,7 @@ export class Board {
     this.width = width;
     this.height = height;
     this.gameField = [];
-    for (let r = 0; r < height; r++) {
-      this.gameField.push(Array(width))
-    }
+    this.resetGameField();
     this.fallingShape = undefined;
     this.score = new Score();
     this.observers = {};
@@ -61,14 +59,18 @@ export class Board {
     }
   }
 
+  resetGameField() {
+    this.gameField = [];
+    for (let r = 0; r < this.height; r++) {
+      this.gameField.push(Array(this.width))
+    }
+  }
+
   gameOver() {
     console.log('game over');
     this.fallingShape = undefined;
-    this.gameField = [];
-    for (let r = 0; r < height; r++) {
-      this.gameField.push(Array(width))
-    }
     this.score.reset();
+    this.resetGameField();
   }
 
   moveRight() {
