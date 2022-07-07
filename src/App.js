@@ -64,6 +64,7 @@ function App() {
 
   const _handleKeyDown = (e) => {
     const { key, ...rest } = e
+    console.log(key)
     switch (key) {
       case ('a'):
         board.moveLeft()
@@ -83,14 +84,28 @@ function App() {
       case ('s'):
         board.moveToBottom()
         break
+      case ('ArrowLeft'):
+        board.moveLeft()
+        break
+      case ('ArrowUp'):
+        board.moveDown()
+        break
+      case ('ArrowRight'):
+        board.moveRight()
+        break
+      case ('ArrowDown'):
+        board.moveToBottom()
+        break
     }
   }
 
   return (
     <div style={{ marginLeft: 10 }}>
-      <div>a move to left d move to right</div>
+      <div>a or arrow left to move to left</div>
+      <div>d or arrow right move to right</div>
+      <div>w or arrow up to move down</div>
+      <div>s or arrow down to drop to bottom</div>
       <div>q rotate to left e rotate to right</div>
-      <div>s move down space drop to bottom</div>
       <div>points: {points} level: {level}</div>
       <Canvas /*style={styles.canvas}*/ draw={draw} />
       <div>copyright 2022 Juho Taipale</div>
