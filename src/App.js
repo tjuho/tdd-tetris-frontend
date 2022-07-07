@@ -64,7 +64,6 @@ function App() {
 
   const _handleKeyDown = (e) => {
     const { key, ...rest } = e
-    console.log(key)
     switch (key) {
       case ('a'):
         board.moveLeft()
