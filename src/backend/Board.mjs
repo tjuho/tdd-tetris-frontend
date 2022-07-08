@@ -20,13 +20,13 @@ export class Board {
     this.score = new Score();
     this.observers = {};
     this.tetrominoRandomizer = new Randomizer();
-    this.tetrominoRandomizer.add(Tetromino.I_SHAPE, 15);
-    this.tetrominoRandomizer.add(Tetromino.T_SHAPE, 18);
-    this.tetrominoRandomizer.add(Tetromino.O_SHAPE, 15);
-    this.tetrominoRandomizer.add(Tetromino.LR_SHAPE, 18);
-    this.tetrominoRandomizer.add(Tetromino.LL_SHAPE, 18);
-    this.tetrominoRandomizer.add(Tetromino.SL_SHAPE, 15);
-    this.tetrominoRandomizer.add(Tetromino.SR_SHAPE, 15);
+    this.tetrominoRandomizer.add(Tetromino.I_SHAPE, 9);
+    this.tetrominoRandomizer.add(Tetromino.T_SHAPE, 9);
+    this.tetrominoRandomizer.add(Tetromino.O_SHAPE, 9);
+    this.tetrominoRandomizer.add(Tetromino.LR_SHAPE, 9);
+    this.tetrominoRandomizer.add(Tetromino.LL_SHAPE, 9);
+    this.tetrominoRandomizer.add(Tetromino.SL_SHAPE, 9);
+    this.tetrominoRandomizer.add(Tetromino.SR_SHAPE, 9);
   }
 
   hasFalling() {
